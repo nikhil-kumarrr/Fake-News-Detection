@@ -93,4 +93,4 @@ streamlit run main.py
 https://newscheckapp.streamlit.app/
 
 ## Screenshots
-![img alt](https://github.com/nikhil-kumarrr/images/blob/main/Screenshot%202025-12-14%20193357.png?raw=true)
+![img alt](https://github.com/nikhil-kumarrr/images/blob/main/Screenshot%202025-12-15%20133744.png?raw=true)
