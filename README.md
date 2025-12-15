@@ -1,31 +1,96 @@
-# Fake News Detection
+# Email Spam Detection System
+A machine learning–based web application that classifies emails as Spam or Safe (Not Spam) using natural language processing techniques.
+Built with Scikit-Learn + Streamlit, this app provides fast and accurate email classification with a clean, modern UI.
 
-This project focuses on detecting misleading or fake news articles using Natural Language Processing (NLP) and Machine Learning. 
-The model analyzes textual content and classifies it as either Real or Fake, helping to combat misinformation online.
+## 🚀 Features
+* ✔️ Detects Spam vs Not Spam emails
+* ✔️ Uses trained ML model (Email Spam model.pkl)
+* ✔️ Text vectorization using saved feature extractor
+* ✔️ Supports real-time text input
+* ✔️ Elegant glassmorphism UI
+* ✔️ Clear visual feedback for predictions
 
-## Features Included :
-* Text preprocessing using TF-IDF Vectorization
-* Machine Learning algorithms trained and compared (Logistic Regression, Naive Bayes, PassiveAggressiveClassifier)
-* Balanced dataset to improve generalization
-* Evaluation metrics: Accuracy, Precision, Recall, and F1 Score
-* Model and vectorizer exported as .pkl files for deployment
-* Interactive Streamlit web app for real-time predictions
-  
-## Sample Metrics :
-| Model                       | Accuracy  | Precision | Recall    | F1 Score  |
-| --------------------------- | --------- | --------- | --------- | --------- |
-| Logistic Regression         | **96.2%** | **95.7%** | **96.4%** | **96.0%** |
-| Naive Bayes                 | **94.8%** | **94.1%** | **94.6%** | **94.3%** |
-| PassiveAggressiveClassifier | **95.5%** | **95.0%** | **95.3%** | **95.1%** |
+## How It Works
+### 1. Dataset
+#### Uses a labeled email dataset (mail_data.csv) containing:
+* Email content
+* Spam / Not Spam labels
 
-## Libraries Used :
-* pandas, numpy
-* scikit-learn
-* nltk
-* re (for regex-based text cleaning)
-* streamlit (for frontend deployment)
+### 2. Text Processing
+* Text cleaning and preprocessing
+* Feature extraction using TF-IDF / CountVectorizer
+* Vocabulary saved as feature_extraction.pkl
+
+### 3. Machine Learning Model
+* Model type: Binary Classification
+* Algorithms used: Naive Bayes / Logistic Regression / SVM
+* Trained and saved using Pickle
+
+### 4. Prediction Pipeline
+#### User input → Vectorization → Model prediction →
+#### Result displayed as:
+* 🚨 Spam Email
+* ✅ Safe Email
+
+## Tech Stack
+* Python
+* Streamlit
+* Scikit-Learn
+* Pickle
+* NumPy
+* NLP (Text Vectorization)
+
+## 📦 Installation & Setup
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
+
+### 2️⃣ Create virtual environment
+```bash
+python -m venv venv
+```
+
+### 3️⃣ Activate environment
+#### Windows:
+```bash
+venv\Scripts\activate
+```
+#### Mac/Linux:
+```bash
+source venv/bin/activate
+```
+
+### 4️⃣ Install required libraries
+```bash
+pip install -r requirements.txt
+```
+
+### 5️⃣ Run the app
+```bash
+streamlit run main.py
+```
+
+## 📁 Project Structure
+```bash
+│── main.py                         # Streamlit app
+│── Email Spam Detection.ipynb      # Model training notebook
+│── mail_data.csv                   # Dataset
+│── Email Spam model.pkl            # Trained ML model
+│── feature_extraction.pkl          # Vectorizer
+│── requirements.txt
+└── README.md
+```
 
 ## Dataset Info :
 * Source: Kaggle – https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
 * Contains real and fake news articles with text and labels.
 * Used for supervised binary classification (Real = 1, Fake = 0).
+
+## 🌐 Live Demo
+https://newscheckapp.streamlit.app/
+
+## Screenshots
+![img alt](https://github.com/nikhil-kumarrr/images/blob/main/Screenshot%202025-12-14%20193357.png?raw=true)
