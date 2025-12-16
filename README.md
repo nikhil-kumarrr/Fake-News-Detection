@@ -1,45 +1,44 @@
-# INCOMPLETE
+# Fake News Detection System
+A machine learning–based web application that detects whether a news article is Real or Fake using natural language processing techniques.
+Built with Scikit-Learn and Streamlit, the app analyzes raw news text and provides instant classification results.
 
-# Email Spam Detection System
-A machine learning–based web application that classifies emails as Spam or Safe (Not Spam) using natural language processing techniques.
-Built with Scikit-Learn + Streamlit, this app provides fast and accurate email classification with a clean, modern UI.
-
-## 🚀 Features
-* ✔️ Detects Spam vs Not Spam emails
-* ✔️ Uses trained ML model (Email Spam model.pkl)
-* ✔️ Text vectorization using saved feature extractor
-* ✔️ Supports real-time text input
-* ✔️ Elegant glassmorphism UI
-* ✔️ Clear visual feedback for predictions
+## 🚀Features
+* Real-time Fake vs Real news classification
+* Trained ML model loaded using joblib
+* Text vectorization using saved NLP vectorizer
+* Clean, professional UI for article analysis
+* Instant prediction with clear visual feedback
 
 ## How It Works
 ### 1. Dataset
-#### Uses a labeled email dataset (mail_data.csv) containing:
-* Email content
-* Spam / Not Spam labels
+#### The model is trained on a labeled fake news dataset containing:
+* News article text
+* Target label (Real / Fake)
 
 ### 2. Text Processing
 * Text cleaning and preprocessing
 * Feature extraction using TF-IDF / CountVectorizer
-* Vocabulary saved as feature_extraction.pkl
+* Vectorizer saved separately for inference
 
-### 3. Machine Learning Model
-* Model type: Binary Classification
-* Algorithms used: Naive Bayes / Logistic Regression / SVM
-* Trained and saved using Pickle
+### 3.Machine Learning Model
+* Binary classification model
+* Trained in Jupyter Notebook
+* Stored as fake_news_model.pkl
 
 ### 4. Prediction Pipeline
-#### User input → Vectorization → Model prediction →
-#### Result displayed as:
-* 🚨 Spam Email
-* ✅ Safe Email
+#### Prediction Pipeline
+User inputs news article →
+Text is vectorized →
+Model predicts class →
+Result displayed as:
+* ✅ Real News
+* 🚨 Fake News
 
 ## Tech Stack
 * Python
 * Streamlit
 * Scikit-Learn
-* Pickle
-* NumPy
+* Joblib
 * NLP (Text Vectorization)
 
 ## 📦 Installation & Setup
@@ -60,6 +59,7 @@ python -m venv venv
 ```bash
 venv\Scripts\activate
 ```
+
 #### Mac/Linux:
 ```bash
 source venv/bin/activate
@@ -77,11 +77,13 @@ streamlit run main.py
 
 ## 📁 Project Structure
 ```bash
-│── main.py                         # Streamlit app
-│── Email Spam Detection.ipynb      # Model training notebook
-│── mail_data.csv                   # Dataset
-│── Email Spam model.pkl            # Trained ML model
-│── feature_extraction.pkl          # Vectorizer
+│── app.py                        # Streamlit application
+│── Fake News Detection.ipynb     # Model training notebook
+│
+├── model/
+│   ├── fake_news_model.pkl       # Trained ML model
+│   └── vectorizer.pkl            # Text vectorizer
+│
 │── requirements.txt
 └── README.md
 ```
