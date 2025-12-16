@@ -92,5 +92,6 @@ streamlit run main.py
 ## 🌐 Live Demo
 https://newscheckapp.streamlit.app/
 
-## Screenshots
+## 📸 Screenshots
+![img alt](https://github.com/nikhil-kumarrr/images/blob/main/Screenshot%202025-12-16%20120431.png?raw=true)
 ![img alt](https://github.com/nikhil-kumarrr/images/blob/main/Screenshot%202025-12-15%20133744.png?raw=true)
