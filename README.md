@@ -1,3 +1,5 @@
+# INCOMPLETE
+
 # Email Spam Detection System
 A machine learning–based web application that classifies emails as Spam or Safe (Not Spam) using natural language processing techniques.
 Built with Scikit-Learn + Streamlit, this app provides fast and accurate email classification with a clean, modern UI.
