@@ -15,7 +15,7 @@ Built with Scikit-Learn and Streamlit, the app analyzes raw news text and provid
 * News article text
 * Target label (Real / Fake)
 
-### 2. Text Processing
+### 2. Text Processing 
 * Text cleaning and preprocessing
 * Feature extraction using TF-IDF / CountVectorizer
 * Vectorizer saved separately for inference
