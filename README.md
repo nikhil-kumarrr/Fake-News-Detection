@@ -12,7 +12,7 @@ Built with Scikit-Learn and Streamlit, the app analyzes raw news text and provid
 ## How It Works
 ### 1. Dataset
 #### The model is trained on a labeled fake news dataset containing:
-* News article text
+* News article text 
 * Target label (Real / Fake)
 
 ### 2. Text Processing 
